@@ -28,19 +28,30 @@ let ganasCaminar = prompt("¿Tienes ganas de caminar?, responde con una 'S' en c
 
 if (distancia == 'S' && ganasCaminar == 'S') {
     document.write("En ese caso no te preocupes, puedes regresar mañana y arreglarlo.");
+
 } else if (distancia == 'N' && ganasCaminar == 'S') {
     document.write("En ese caso no te preocupes, puedes regresar mañana y arreglarlo.");
+
 } else {
     let gasolina = prompt("¿El coche tiene gasolina?, responde con una 'S' en caso afirmativo, o con una 'N' en caso negativo: ");
-    if (gasolina == 'N') {
-        document.write("Hay que ir a repostar");
-    } else {
-        let bateria = prompt("¿Tiene carga suficiente la batería?, responde con una 'S' en caso afirmativo, o con una 'N' en caso negativo: ");
-        if (bateria == 'S') {
-            document.write("Debes ir donde tu mecánico.");
-        } else {
-            document.write("Debes recargar la batería");
-        }
-    }
 
+    if (gasolina == 'N') {
+        let dinero = prompt("Habría que ir a repostar; ¿Tienes dinero?, responde con una 'S' en caso afirmativo, o con una 'N' en caso negativo: ");
+
+        if (dinero == 'N') {
+            document.write("Te toca ir en metro.");
+
+        } else {
+            let bateria = prompt("¿Tiene carga suficiente la batería?, responde con una 'S' en caso afirmativo, o con una 'N' en caso negativo: ");
+
+            if (bateria == 'S') {
+                document.write("Debes ir donde tu mecánico.");
+
+            } else {
+                document.write("Debes recargar la batería");
+
+            }
+        }
+
+    }
 }
